@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<vector>
 
@@ -23,9 +23,9 @@ public:
 		delete(this);
 	}
 	virtual void Mostrare() {
-		std::cout << "ÔÈÎ æèëüöà : " << this->_FIO << '\n';
-		std::cout << "Âîçðàñò : " << this->_eta << '\n';
-		std::cout << "Äåÿòåëüíîñòü : " << this->_attivita << '\n';
+		std::cout << "Ð¤Ð˜Ðž Ð¶Ð¸Ð»ÑŒÑ†Ð° : " << this->_FIO << '\n';
+		std::cout << "Ð’Ð¾Ð·Ñ€Ð°ÑÑ‚ : " << this->_eta << '\n';
+		std::cout << "Ð”ÐµÑÑ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ : " << this->_attivita << '\n';
 	}
 };
 class Appartamento :public Persona{
@@ -53,8 +53,8 @@ public:
 		return camera;
 	}
 	void Mostrare1(){
-		std::cout << "\n\nÊîëè÷åñòâî êîìíàò : " << num << '\n';
-		std::cout << "Íîìåð êâàðòèðû : " << camera << '\n';
+		std::cout << "\n\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚ : " << num << '\n';
+		std::cout << "ÐÐ¾Ð¼ÐµÑ€ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹ : " << camera << '\n';
 		for (const auto& it : pers) {
 			it->Mostrare();
 		}
@@ -79,7 +79,7 @@ public:
 		return _Adresse;
 	}
 	void Mostrare2() {
-		std::cout << "Àäðåñ : " << _Adresse <<'\n';
+		std::cout << "ÐÐ´Ñ€ÐµÑ : " << _Adresse <<'\n';
 		for (const auto& it1 : appart)
 			it1->Mostrare1();
 	}
