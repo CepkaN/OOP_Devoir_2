@@ -14,6 +14,11 @@ public:
 		_eta = 0;
 		_attivita = "niente";
 	}
+	Persona(const Persona& p) {
+		_FIO = p._FIO;
+		_eta = p._eta;
+		_attivita = p._attivita;
+	}
 	~Persona(){
 		delete(this);
 	}
@@ -33,6 +38,11 @@ public:
 		this->pers = per; this->num = n; this->camera = c;
 	}
 	Appartamento(){}
+	Appartamento(const Appartamento& app) {
+		pers = app.pers;
+		num = app.num;
+		camera = app.camera;
+	}
 	~Appartamento() {
 		delete(this);
 	}
@@ -57,6 +67,10 @@ private:
 public:
 	Casa(std::string Adr, std::vector<Appartamento*>&App) {
 		this->_Adresse = Adr; this->appart = App;
+	}
+	Casa(const Casa& c) {
+		appart = c.appart;
+		_Adresse = c._Adresse;
 	}
 	~Casa() {
 		delete(this);
